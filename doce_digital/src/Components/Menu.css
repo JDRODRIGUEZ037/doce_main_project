@@ -1,0 +1,93 @@
+/* Estilo general del menú lateral */
+menu {
+    width: 100px;
+    height: 100%;
+    padding: 0;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Estilo del logo dentro del menú */
+  menu img {
+    width: 5em;
+    padding-top: 0px;
+  }
+
+  /* Contenedor de las listas (ul) */
+menu ul {
+    padding-top: 30px;
+    padding-left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+/* Cada ítem del menú */
+menu ul li {
+    list-style: none;
+    margin: 20px 0;
+    position: relative;
+    color: white;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Estilo del enlace que contiene el ícono */
+  menu ul li a {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s;
+    position: relative;
+  }
+  
+/* Circulito antes del ícono */
+menu ul li a:before {
+    position: absolute;
+    content: '';
+    top: 5px;
+    left: -50px;
+    width: 0;
+    height: 20px;
+    background: rgb(54, 8, 54);
+    border-radius: 50%;
+  }
+  
+  /* Cambio de color del ícono al hacer hover */
+  menu ul li:hover a {
+    color: rgb(72, 19, 72);
+  }
+  
+  /* Expansión del círculo decorativo al hacer hover */
+  menu ul li:hover a::before {
+    width: 20px;
+    transition: 0.3s;
+  }
+  
+  /* Color del ícono activo */
+menu ul li.active a {
+    color: rgb(72, 19, 72);
+  }
+  
+  /* Círculo del ítem activo */
+  menu ul li.active a::before {
+    width: 20px;
+    transition: all 0.3s;
+  }
+  
+  .lastMenu {
+    margin-top: auto; /* Empuja el último menú hacia el fondo */
+    margin-bottom: 50px;
+}
+  
+  @media only screen and (max-width: 525px) {
+    menu {
+      min-width: 68px;
+      width: 68px;
+    }
+  }
+  
+  
